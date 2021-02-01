@@ -1,0 +1,14 @@
+server:
+  port: 8081
+#如果指定了spring应用名称，可以缺省dubbo的应用名称，这2个至少要配置1个。缺省dubbo的应用名称时默认值是spring的应用名称
+dubbo:
+  application:
+    name: producer
+  registry:
+    address: zookeeper://192.168.2.107:2181
+    timeout: 10000
+  protocol:
+    name: dubbo
+    port: 20880
+  scan:
+    base-packages: com.baixs.producer.service
